@@ -1,0 +1,3 @@
+# Ready-to-run research prompt
+
+> 进入 `tmzncty/old-web-archaeology` 后，先读 `AGENTS.md`、`README.md`、`ROADMAP.md`、`RESEARCH_PLAN.md`、`docs/PRIOR_ART.md` 和已有 case/evidence。不要把任务改写成建爬虫或漂亮怀旧网页，从 `RESEARCH_PLAN.md` 中依赖已满足的最早未完成研究项开始直接做。每个历史结论必须尽量留下 original/archive URL、capture datetime、访问日期、证据等级和 inference 标记；优先交叉核验多个独立证据源。严格区分同时代原始证据、二手材料、后来回忆与研究者复原；复原内容不得伪装成原件。涉及个人敏感/已删除内容或版权不明资源时，优先只保存 metadata、引用和分析，不重新公开原件。允许明确写“无法可靠复原”“不知道”，不要用生成式内容补历史空白。每完成一个证据闭环就做隐私/版权/后见之明自检并提交 checkpoint，然后继续下一研究切片。没有真正的证据、许可或隐私 blocker 时不要停。最终汇报：新增 case/数据、证据来源与等级、无法确认之处、commit、下一研究项和 blocker。
