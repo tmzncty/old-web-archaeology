@@ -6,8 +6,8 @@
 
 目标：让两个不同的人/AI 对同一旧站点，能够用同一格式留下证据。
 
-- [ ] `docs/METHOD.md`：A/B/C/D 证据等级细则；
-- [ ] `docs/CITATION.md`：archive URL、original URL、capture datetime 的引用规范；
+- [x] `docs/METHOD.md`：A/B/C/D 证据等级细则；
+- [x] `docs/CITATION.md`：archive URL、original URL、capture datetime 的引用规范；
 - [ ] `schemas/evidence.schema.json`；
 - [ ] `datasets/sites.csv` 字段定义；
 - [ ] 规定“复原页面”必须携带 reconstruction 标识；

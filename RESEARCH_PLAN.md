@@ -2,8 +2,8 @@
 
 ## Phase 0 — Method contract
 
-- [ ] `docs/METHOD.md`：A/B/C/D 证据等级细则；
-- [ ] `docs/CITATION.md`：archive URL、original URL、capture datetime、访问日期；
+- [x] `docs/METHOD.md`：A/B/C/D 证据等级细则；
+- [x] `docs/CITATION.md`：archive URL、original URL、capture datetime、访问日期；
 - [ ] `schemas/evidence.schema.json`；
 - [ ] `datasets/sites.csv` 字段；
 - [ ] reconstruction 标识规则；
