@@ -107,7 +107,7 @@ consumer experiences problem
 
 1. 在“315消费电子投诉网”提交投诉；
 2. 声称投诉已经被受理；
-3. 给出具体 URL：`http://www.315ts.net/ts/viewtousu.asp?id=173630`；
+3. 给出一个 `http://www.315ts.net/ts/viewtousu.asp?id=<numeric-id>` 格式的具体投诉页 locator；
 4. 同时继续拨打快递分公司电话和企业投诉电话。
 
 来源：同时代个人 Web 日记，A/B 之间的操作证据：
@@ -121,7 +121,7 @@ path: /ts/viewtousu.asp
 query: id=<numeric complaint id>
 ```
 
-它至少说明，当时用户能够把某个投诉记录当作**可链接的 Web 对象**在别处引用。
+原博客保留了当年的完整 numeric locator；本仓只保存 URL pattern 和 source URL，不再次扩散普通投诉人的具体 complaint ID。它至少说明，当时用户能够把某个投诉记录当作**可链接的 Web 对象**在别处引用。
 
 但这里必须保持 METHOD 门槛：
 
@@ -181,7 +181,7 @@ query: id=<numeric complaint id>
 
 同期论坛/媒体材料还能看到另一种用途：消费者会把 315ts 投诉 URL 转贴到博客、论坛、QQ群讨论中，用来告诉其他人“同型号/同商家也有人遇到类似问题”。
 
-例如 2008 年博客园的具体 locator，以及同时期相机用户讨论里对 315ts complaint URL 的转引，都说明：
+例如 2008 年博客园的 locator，以及同时期相机用户讨论里对 315ts complaint URL 的转引，都说明：
 
 `individual complaint`
 
@@ -480,7 +480,7 @@ server 收到数据不等于网站认为投诉有效。
 
 - host：`www.315ts.net`
 - historical complaint URL pattern：`/ts/viewtousu.asp?id=<numeric id>`
-- contemporaneous concrete locator：`http://www.315ts.net/ts/viewtousu.asp?id=173630`
+- 同时代外部博客保留过一个具体 numeric locator；本仓不重复该 ID，只保存 pattern 与 source URL。
 
 证据：
 
@@ -591,7 +591,7 @@ server 收到数据不等于网站认为投诉有效。
 - 普通投诉人的姓名若非理解 claim 所必需，不进入数据集；
 - attachment 即使 archive 可取，也先检查隐私与版权再决定是否引用。
 
-2008 的具体 complaint ID 在本文只作为同期已公开的**技术 locator**保留一次，不据此重新拼接当事人的私人消费史。
+本轮因此只保留 2008 外部博客足以证明的 host/path/query pattern，不把普通投诉人的具体 complaint ID 复制进仓库，也不据此重新拼接其私人消费史。
 
 ---
 
