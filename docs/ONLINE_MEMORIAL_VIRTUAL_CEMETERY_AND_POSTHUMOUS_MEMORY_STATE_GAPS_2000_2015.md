@@ -181,11 +181,9 @@ user can verify future provider survival
 
 ## E5 — current live legacy shell: Netor 管理页仍可观察，但不能冒充 2004
 
-2026-09-06 本轮检索中，`cn.netor.net` 仍有可访问的 legacy-looking 管理页，例如：
+2026-09-06 本轮检索中，`https://cn.netor.net/` 仍有可访问的 legacy-looking 页面，并可观察到形如 `m/manager/man_<id>.html` 的管理页 URL pattern。按本仓隐私最小化原则，这里只记录 host 与抽象 pattern，不保留普通纪念对象的具体 numeric ID。
 
-- <https://cn.netor.net/m/manager/man_5683.html>
-
-当前页面可观察到诸如：
+当前页面层可观察到诸如：
 
 - 管理 / 祭奠 / 留言 / 链接 / 年谱 / 相册 / 文选等 tab；
 - 馆号 / 用户 / 密码 / 验证码式管理登录 shell；
@@ -507,7 +505,7 @@ So a modern screenshot cannot be labeled “what a 2004 mourner saw.”
 - “The report gave `www.netor.com` as a historical locator.”
 - “A 2008 first-person media case described using a paid online memorial so distant classmates/friends could participate.”
 - “A 2008 contemporaneous consumer report recorded fear that paid memorial pages/providers might disappear.”
-- “A current 2026 Netor legacy page exposes a management/login shell and memorial navigation categories.”
+- “A current 2026 Netor legacy surface exposes a management/login shell and memorial navigation categories.”
 
 ## Unsafe claims without stronger evidence
 
@@ -534,6 +532,7 @@ Rules:
 5. Do not attempt password recovery or account login.
 6. Do not treat an archived public page as blanket consent to republish all photographs or grief messages.
 7. Do not dox surviving relatives to answer “what happened to this memorial later?”
+8. 对普通纪念页的当前 URL 只记录 host 与抽象 path pattern；除非研究对象本身是公开机构页，否则不在研究笔记中保留可直接定位普通逝者的 numeric ID。
 
 A dead person’s page may also contain living people’s messages and contact traces. Those living persons retain ordinary privacy interests.
 
