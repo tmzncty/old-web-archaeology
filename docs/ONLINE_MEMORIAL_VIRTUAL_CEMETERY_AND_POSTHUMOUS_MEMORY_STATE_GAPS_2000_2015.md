@@ -115,7 +115,7 @@ http://www.netor.com
 
 Source:
 
-- 江淮晨报 / 新浪，2004-03-30：<https://news.sina.com.cn/s/2004-03-30/07432174212s.shtml>
+- 江淮晨报 / 新浪，2004-03-30：<https://news.sina.com.cn/c/2004-03-30/02152172262s.shtml>
 
 Grade: **B — 同时代媒体。**
 
