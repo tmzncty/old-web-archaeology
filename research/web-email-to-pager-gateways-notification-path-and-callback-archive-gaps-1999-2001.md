@@ -7,7 +7,7 @@
 本仓已经有：
 
 - [`168-audiotex-ivr-web-bridge-and-voice-interface-archive-gap-1998-2015.md`](168-audiotex-ivr-web-bridge-and-voice-interface-archive-gap-1998-2015.md)：Web / 电话 / IVR / 私有数据库；
-- [`ip-telephone-cross-protocol-service-topology-1999-2008.md`](ip-telephone-cross-protocol-service-topology-1999-2008.md)（若路径发生变化，以仓内同主题文档为准）：Web / 零售卡 / PSTN / IVR / 电信网；
+- [`ip-telephone-cards-201-campus-phones-public-phone-bars-and-cross-protocol-service-topology-1999-2008.md`](ip-telephone-cards-201-campus-phones-public-phone-bars-and-cross-protocol-service-topology-1999-2008.md)：Web / 零售卡 / PSTN / IVR / 电信网；
 - 多个 `page visible != transaction complete` 类状态专题。
 
 如果本文件只写：
