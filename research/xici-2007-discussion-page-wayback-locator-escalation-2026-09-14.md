@@ -139,3 +139,103 @@ The WELL 自己 1998 年的公告又说明 Vue conferences 可以由任何 Web �
 本轮取得的是**artifact locator 进展**，不是新的普通生活路径、制度接口、时代时间感、通信转折机制或能实质改变 HPL 结论的一手材料。海外 The WELL 对照也主要确认仓库已有的“线上/线下混合社群”理解。
 
 因此在跨仓研究的饱和计数中，本轮应记为一次 **no-new-mechanism run**；上一轮地图/导航研究确有新的 `route executability`，已把计数重置，所以当前为 **1/3**。
+
+---
+
+## 9. Replay retry（2026-09-14，同日后续轮次）
+
+本轮按上述优先级再次重试同一精确 memento，没有另换主题，也没有为失败状态新开文件。
+
+### 9.1 locator 再确认
+
+后出的 3rabica 参考页当前仍提供：
+
+- 原始页题名；
+- `http://www.xici.net/b373044/d50430566.htm`；
+- `2007-03-28` 原始日期标签；
+- `https://web.archive.org/web/20110724135817/http://www.xici.net/b373044/d50430566.htm`；
+- archived / retrieved date。
+
+因此 locator provenance 再次得到确认，但证据等级仍然只是**后出参考链中的精确 archive locator**。
+
+### 9.2 本次 replay 结果
+
+沿精确 Wayback locator 获取主文档时，当前研究通路返回 fetch/cache failure；main document 仍未取回。另一路 archive index / CDX 查询在当前环境中遇到临时网络解析失败。
+
+因此本次只能追加：
+
+```yaml
+retry_date: 2026-09-14
+locator_reconfirmed: true
+opened_capture: false
+main_document_returned: false
+failure_class:
+  - replay_fetch_or_cache_failure_in_current_environment
+  - alternate_archive_index_path_temporarily_unavailable
+negative_claims_not_permitted:
+  - capture_absent
+  - archive_never_saved_page
+  - historical_page_lost
+m1_status: NOT ACHIEVED
+```
+
+仍然未知：
+
+- historical / replay HTTP；
+- `Content-Type`；
+- charset；
+- DOM；
+- board shell / breadcrumb / reply structure；
+- author / timestamp metadata；
+- CSS / image / JS survival；
+- Wayback rewrite；
+- 第二历史时点。
+
+这次 retry 的价值不在于“又失败了一次”，而在于保持证据语义稳定：**工具路径失败不等于 archive absence。**
+
+## 10. 并行 artifact lead：Carboy 的用户侧整站下载
+
+本轮没有把西祠失败当成换题借口，但为了避免只反复撞一个 replay endpoint，也检查了已有具体对象 `完全上网手册 / Carboy` 的公开保存线索。
+
+刘韧在新浪科技 2000-11-06 的《杨震霆广州网事》中记录：1997 年王峻涛为学习做网站，曾把“完全上网手册”整个下载到本机并集中离线阅读数日：
+
+- <https://tech.sina.com.cn/path/2000-11-06/491.shtml>
+
+同年杨震霆自己的文章给出历史站点路径 `business.gznet.com/carboy/`，并讨论其后托管变化和内容碎片化：
+
+- <https://tech.sina.com.cn/r/m/46310.shtml>
+
+这不是 Carboy 页面本体的恢复，但它提供了一个具体 derivative-artifact 假设：**1997 年曾存在用户侧的整站本地副本。** 后续可以优先检查公开捐赠的离线网页包、公开磁盘/CD-ROM 镜像、合法公开的个人镜像、软件附盘或其他公开 derivative corpus，而不只依赖 Wayback。
+
+边界：
+
+- 不推定这份 1997 副本今天仍存在；
+- 不寻找私人硬盘、私人账号或未公开文件；
+- 不把 later text / current live-legacy page 冒充 1997 historical Web capture；
+- 仓库已有 offline browsing / local-copy preservation 机制，因此这一条只是 artifact lead，不新开理论文件。
+
+海外 preservation 对照重新检查了 2009 GeoCities 抢救：Archive Team 在停站前组织 coordinated grab，Internet Archive 同时进行了 deep crawl；不同项目保存到的子集并不完全相同。这个对照说明旧个人主页能否在今天可见，常取决于**抢救生态与副本路径**，而不是原站是否“自然活下来”。它不改变 OWA 的中文旧网 scope，也不把 GeoCities 写进中文 case。
+
+参考：
+
+- <https://wiki.archiveteam.org/index.php/GeoCities_Project>
+- <https://wiki.archiveteam.org/index.php/Geocities>
+
+## 11. 本次 retry 后的跨仓饱和位置
+
+本次没有得到：
+
+- 实际打开的西祠 historical main document；
+- 新的普通生活路径；
+- 新制度接口；
+- 新时代时间机制；
+- 新通信 / Internet 转折机制；
+- 足以改变既有结论的新一手 artifact。
+
+Carboy 的 1997 本地整站下载属于**已有 preservation mechanism 的具体证据升级**；GeoCities 属于海外保存生态对照，主要强化 survivor-bias / rescue-path 判断。
+
+因此按照跨仓统一计数，本次应把连续 no-new-mechanism / no-conclusion-changing-artifact 计数从 `1/3` 推进为：
+
+**`2/3`。**
+
+尚未达到 closure；下一轮应继续以 opened artifact / second historical timepoint 为硬目标。如果下一轮仍只有 locator、后出材料或已有机制的增补，则应先做 coverage audit，并按既定规则判断是否进入 `3/3` closure，而不是继续制造新 state-gap 专题。
