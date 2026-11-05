@@ -1,0 +1,49 @@
+{
+  "subject": {
+    "id": "fixture-candidate",
+    "kind": "homepage",
+    "label": "示例：尚未打开的历史快照候选"
+  },
+  "evidence": [
+    {
+      "source_id": "E-LOC-001",
+      "title": "候选快照（虚构）",
+      "original_url_observed": "http://example.org/~user/",
+      "archive_source": "internet-archive",
+      "capture_url": "https://web.archive.org/web/20010101000000/http://example.org/~user/",
+      "capture_datetime": "2001-01-01T00:00:00Z",
+      "accessed_at": "2026-11-05",
+      "evidence_grade": "A",
+      "evidence_type": "archived-page",
+      "evidence_family": "example-candidate",
+      "verification": "locator-only",
+      "capture_state": "candidate",
+      "limitations": [
+        "未打开 capture；不可用来证明历史 HTML 内容。"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "example-content-unverified",
+      "statement": "该候选页面的内容仍未验证。",
+      "status": "unknown",
+      "supports": [
+        "E-LOC-001"
+      ],
+      "missing_evidence": [
+        "实际打开快照、原始响应头与 HTML 字节"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "is_reconstruction": false
+  },
+  "privacy_review": {
+    "status": "restricted",
+    "notes": "占位 URL；真实用户主页须先审查。"
+  },
+  "copyright_review": {
+    "status": "metadata-only"
+  }
+}
