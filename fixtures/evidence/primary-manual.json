@@ -1,0 +1,42 @@
+{
+  "subject": {
+    "id": "fixture-manual",
+    "kind": "page",
+    "label": "示例：同时代官方帮助文档"
+  },
+  "evidence": [
+    {
+      "source_id": "E-A-001",
+      "title": "示例帮助页（虚构，不是历史事实）",
+      "creator": "示例机构",
+      "source_url": "https://example.org/manual",
+      "page_date": "2003-06-01",
+      "accessed_at": "2026-11-05",
+      "evidence_grade": "A",
+      "evidence_type": "manual",
+      "evidence_family": "example-official-manual",
+      "verification": "direct",
+      "capture_state": "not-applicable",
+      "notes": "仅用于 schema 测试；不构成实际史料。"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "example-feature-exists",
+      "statement": "示例文档声称提供 FTP 上传功能。",
+      "status": "verified",
+      "supports": [
+        "E-A-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "is_reconstruction": false
+  },
+  "privacy_review": {
+    "status": "cleared-metadata-only"
+  },
+  "copyright_review": {
+    "status": "metadata-only"
+  }
+}
