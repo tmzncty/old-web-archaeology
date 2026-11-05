@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tmzncty/old-web-archaeology/blob/main/schemas/evidence.schema.json",
+  "title": "Old Web Archaeology evidence index v0.1",
+  "description": "Evidence/claim provenance; validation is not historical verification. JSON Schema can validate YAML after parsing.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subject",
+    "evidence",
+    "claims",
+    "reconstruction"
+  ],
+  "properties": {
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "platform",
+            "site",
+            "host",
+            "account",
+            "homepage",
+            "page",
+            "capture",
+            "artifact",
+            "other"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "historical_locator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "reconstruction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "is_reconstruction"
+      ],
+      "properties": {
+        "is_reconstruction": {
+          "type": "boolean"
+        },
+        "originals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "substitutions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "modern_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unresolved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "is_reconstruction": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "originals",
+              "missing_artifacts",
+              "substitutions",
+              "modern_tools",
+              "assumptions",
+              "unresolved"
+            ]
+          }
+        }
+      ]
+    },
+    "privacy_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "not-reviewed",
+            "cleared-metadata-only",
+            "restricted"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "copyright_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "not-reviewed",
+            "metadata-only",
+            "licensed",
+            "restricted"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "datetime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "title",
+        "evidence_grade",
+        "evidence_type",
+        "evidence_family",
+        "verification",
+        "accessed_at"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "creator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "original_url_observed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_url_normalized": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "archive_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "capture_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "capture_datetime": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/datetime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "page_date": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event_date": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "accessed_at": {
+          "$ref": "#/$defs/date"
+        },
+        "evidence_grade": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "evidence_type": {
+          "enum": [
+            "archived-page",
+            "warc",
+            "screenshot",
+            "manual",
+            "official-announcement",
+            "news",
+            "tutorial",
+            "technical-record",
+            "recollection",
+            "secondary-source",
+            "research-inference",
+            "other"
+          ]
+        },
+        "evidence_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification": {
+          "enum": [
+            "direct",
+            "locator-only",
+            "secondary-quote",
+            "unavailable"
+          ]
+        },
+        "capture_state": {
+          "enum": [
+            "not-checked",
+            "candidate",
+            "verified",
+            "error",
+            "redirect",
+            "login",
+            "robots",
+            "missing-resource",
+            "not-applicable"
+          ]
+        },
+        "http_status": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 100,
+          "maximum": 599
+        },
+        "content_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "charset": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "warc_record_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "warc_target_uri": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "browser_assumption": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evidence_type": {
+                "const": "archived-page"
+              },
+              "verification": {
+                "const": "direct"
+              }
+            },
+            "required": [
+              "evidence_type",
+              "verification"
+            ]
+          },
+          "then": {
+            "required": [
+              "capture_url",
+              "capture_datetime",
+              "archive_source"
+            ],
+            "properties": {
+              "capture_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "capture_datetime": {
+                "$ref": "#/$defs/datetime"
+              },
+              "archive_source": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_grade": {
+                "const": "D"
+              }
+            },
+            "required": [
+              "evidence_grade"
+            ]
+          },
+          "then": {
+            "required": [
+              "limitations"
+            ],
+            "properties": {
+              "limitations": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "statement",
+        "status",
+        "supports"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "probable",
+            "unknown",
+            "inference",
+            "contradicted"
+          ]
+        },
+        "supports": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
