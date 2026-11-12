@@ -1,0 +1,63 @@
+{
+  "subject": {
+    "id": "fixture-reconstruction",
+    "kind": "page",
+    "label": "示例：现代重建页面"
+  },
+  "evidence": [
+    {
+      "source_id": "E-D-001",
+      "title": "研究者示意性重建",
+      "accessed_at": "2026-11-05",
+      "evidence_grade": "D",
+      "evidence_type": "research-inference",
+      "evidence_family": "example-inference",
+      "verification": "direct",
+      "capture_state": "not-applicable",
+      "limitations": [
+        "没有历史 DOM 或插件二进制；现代排版仅为示意。"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "example-replay",
+      "statement": "示例重建的视觉布局不代表历史原貌。",
+      "status": "inference",
+      "supports": [
+        "E-D-001"
+      ],
+      "alternatives": [
+        "历史浏览器字体与表格布局可能不同"
+      ],
+      "missing_evidence": [
+        "历史 HTML 与运行环境"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "is_reconstruction": true,
+    "originals": [],
+    "missing_artifacts": [
+      "原始 HTML"
+    ],
+    "substitutions": [
+      "手写占位布局"
+    ],
+    "modern_tools": [
+      "现代浏览器"
+    ],
+    "assumptions": [
+      "布局仅为示意"
+    ],
+    "unresolved": [
+      "历史字符集与字体"
+    ]
+  },
+  "privacy_review": {
+    "status": "cleared-metadata-only"
+  },
+  "copyright_review": {
+    "status": "metadata-only"
+  }
+}
